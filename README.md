@@ -1,7 +1,7 @@
 <h1 align ="center" > 🏆Photo Upload </h1>
 <h4  align ="center"> 
-Fullstack open source application, dynamic website with 
-  features like opportunities portal, blog portal, admin dashboard, authentication and more.  Made with MongoDB, Express, Nodejs  </h4>
+Fullstack open source application, dynamic website with features like opportunities portal,</h4>
+ <h4  align ="center">blog portal, admin dashboard, authentication and more.  Made with MongoDB, Express, Nodejs  </h4>
 <br>
 <br>
 
@@ -48,10 +48,13 @@ DONT FORGET TO CREATE THE IMAGE FOLDER - ./uploads
 
 ##  Screenshots:
 <br>
-<img src="./PhotoUpload001/projectimages/image01.jpg" alt="project screenshot01" />
-<img src="./PhotoUpload001/projectimages/image02.jpg" alt="project screenshot02" />
-<img src="./PhotoUpload001/projectimages/image03.jpg" alt="project screenshot03" />
-<img src="./PhotoUpload001/projectimages/image04.jpg" alt="project screenshot04" />
+<img src="./SYSTEMIMAGES/IMAGE01.jpg" alt="project screenshot01" />
+<img src="./SYSTEMIMAGES/IMAGE02.jpg" alt="project screenshot02" />
+<img src="./SYSTEMIMAGES/IMAGE03.jpg" alt="project screenshot03" />
+<img src="./SYSTEMIMAGES/IMAGE04.jpg" alt="project screenshot04" />
+<img src="./SYSTEMIMAGES/IMAGE05.jpg" alt="project screenshot05" />
+<img src="./SYSTEMIMAGES/IMAGE06.jpg" alt="project screenshot06" />
+
 <br>
 
 ##  Key Features:
