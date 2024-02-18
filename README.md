@@ -58,9 +58,9 @@ DONT FORGET TO CREATE THE IMAGE FOLDER - ./public/images
 
 <br>
 
-##  👓 Key Features:
+##  Key Features:
 
-Authentication:
+Authentication: 👓
 
     User sign up and login with email and password
     Admin login using admin credentials
