@@ -1,4 +1,4 @@
-<h1 align ="center" > :desktop_computer:Photo Upload </h1>
+<h1 align ="center" > :desktop_computer:  Photo Upload </h1>
 <h4  align ="center"> 
 Fullstack open source application, dynamic website with features like opportunities portal,</h4>
  <h4  align ="center">blog portal, admin dashboard, authentication and more.  Made with MongoDB, Express, Nodejs  </h4>
@@ -15,7 +15,7 @@ Fullstack open source application, dynamic website with features like opportunit
   * [📸 Screenshots](#screenshots)
   * [Author](#author)
   * <br>
-  * ## Configuration and Setup
+  * ## ⚙️ Configuration and Setup
 
 In order to run this project locally, simply fork and clone the repository or download as zip and unzip on your machine.
 
@@ -46,7 +46,7 @@ DONT FORGET TO CREATE THE IMAGE FOLDER - ./public/images
 ![Static Badge](https://img.shields.io/badge/joi%20-aqua?style=for-the-badge)
 
 
-##  Screenshots:
+##  📸 Screenshots:
 <br>
 <img src="./SYSTEMIMAGES/IMAGE01.jpg" alt="project screenshot01" />
 <img src="./SYSTEMIMAGES/IMAGE02.jpg" alt="project screenshot02" />
@@ -57,7 +57,7 @@ DONT FORGET TO CREATE THE IMAGE FOLDER - ./public/images
 
 <br>
 
-##  Key Features:
+##  👓 Key Features:
 
 Authentication:
 
@@ -84,7 +84,7 @@ Displaying flash messages for responding to user's interaction with the applicat
 MongoDB
 <br/>
 
-##  Technologies used
+##  📋 Technologies used
 
 This project was created using the following technologies.
 
@@ -106,11 +106,11 @@ This project was created using the following technologies.
 - [nodemon](https://nodemon.io/) - Development utility for Node.js applications. Node.js is a runtime platform that allows you to run JavaScript on the server side.t
 - [Multer] - Handle Images
 
-####  Database 
+#### 💾 Database 
 
  - [MongoDB ](https://www.mongodb.com/) - It provides a free cloud service to store MongoDB collections.
 
-## Author
+## 👨🏻‍🏫 Author
 - Portfolio: 
 - Github: 
 - Sponsor: 
