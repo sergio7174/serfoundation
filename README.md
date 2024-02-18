@@ -1,4 +1,4 @@
-<h1 align ="center" > :desktop_computer:  Photo Upload </h1>
+<h1 align ="center" > :desktop_computer:  Ser Foundation </h1>
 <h4  align ="center"> 
 Fullstack open source application, dynamic website with features like opportunities portal,</h4>
  <h4  align ="center">blog portal, admin dashboard, authentication and more.  Made with MongoDB, Express, Nodejs  </h4>
