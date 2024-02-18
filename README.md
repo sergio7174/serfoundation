@@ -26,7 +26,7 @@ In order to run this project locally, simply fork and clone the repository or do
 $ cd client
 $ npm install (to install client-side dependencies)
 $ npm run  start (to start the client)  or nodemon app
-DONT FORGET TO CREATE THE IMAGE FOLDER - ./uploads
+DONT FORGET TO CREATE THE IMAGE FOLDER - ./public/images
 ```
 ```
 
