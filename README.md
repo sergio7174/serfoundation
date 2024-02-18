@@ -46,7 +46,8 @@ DONT FORGET TO CREATE THE IMAGE FOLDER - ./public/images
 ![Static Badge](https://img.shields.io/badge/joi%20-aqua?style=for-the-badge)
 
 
-##  📸 Screenshots:
+##  Screenshots:
+📸
 <br>
 <img src="./SYSTEMIMAGES/IMAGE01.jpg" alt="project screenshot01" />
 <img src="./SYSTEMIMAGES/IMAGE02.jpg" alt="project screenshot02" />
