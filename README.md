@@ -5,7 +5,7 @@ Fullstack open source application, dynamic website with features like opportunit
 <br>
 <br>
 
-  * [Configuration and Setup](#configuration-and-setup) ⚙️
+  * [Configuration and Setup](#configuration-and-setup)
   * [Key Features](#key-features)
   * [Technologies used](#technologies-used)
       - [Frontend](#frontend)
