@@ -106,9 +106,9 @@ MongoDB
 - [nodemon](https://nodemon.io/) - Development utility for Node.js applications. Node.js is a runtime platform that allows you to run JavaScript on the server side.t
 - [Multer] - Handle Images
 
-#### 💾 Database 
+####  Database 
 
- - [MongoDB ](https://www.mongodb.com/) - It provides a free cloud service to store MongoDB collections.
+ - [MongoDB ](https://www.mongodb.com/) - It provides a free cloud service to store MongoDB collections.💾
 
 ## Author
      👨🏻‍🏫 
