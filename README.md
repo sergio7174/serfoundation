@@ -11,7 +11,6 @@ Fullstack open source application, dynamic website with features like opportunit
       - [Frontend](#frontend)
       - [Backend](#backend)
       - [Database](#database)
-      - [API](#api)
   * [📸 Screenshots](#screenshots)
   * [Author](#author)
   * <br>
@@ -111,7 +110,8 @@ MongoDB
 
  - [MongoDB ](https://www.mongodb.com/) - It provides a free cloud service to store MongoDB collections.
 
-## 👨🏻‍🏫 Author
+## Author
+     👨🏻‍🏫 
 - Portfolio: 
 - Github: 
 - Sponsor: 
