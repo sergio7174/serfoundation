@@ -85,9 +85,9 @@ Displaying flash messages for responding to user's interaction with the applicat
 MongoDB
 <br/>
 
-##  📋 Technologies used
+##  Technologies used
 
-This project was created using the following technologies.
+📋 This project was created using the following technologies.
 
 ####  Frontend 
 
