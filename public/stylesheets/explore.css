@@ -1,0 +1,45 @@
+.jumbotron{
+	background: url("https://imgur.com/13Iewor.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius:0;
+	padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+	height: 80vh;
+}
+#exp{
+	color:black;
+	margin-top: 25vh;
+	font-size: 4rem;
+	margin-bottom:2rem;
+	padding-left: 1rem;
+	padding-right:1rem;
+}
+.card-img-top{
+	height:13rem;
+	object-fit:cover;
+}
+.btn:hover{
+	border: 2px solid #A53692;
+}
+#more{
+	margin-bottom:0;
+}
+@media (min-width: 992px){
+	.card{
+		height: 35rem;
+	}
+}
+
+@media (max-width:992px){
+	#exp{
+		font-size: 3.5rem;
+	}
+	
+}
+@media (max-width:540px){
+	#exp{
+		font-size: 3rem;
+	}
+}

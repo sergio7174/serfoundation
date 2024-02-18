@@ -1,0 +1,35 @@
+</div>
+</div>
+
+<!--- muestra debajo del menu principal la ruta de la pagina actual-->
+<%- include("../../partials/breadcrumb") -%>
+<!-- si la matriz opporttunities esta vacia, indicar que no hay opportunities -->
+<% if(opportunities.length==0){ %>
+	<div class="container">
+		<div class="alert alert-info" role="alert">
+		No Opportunities in this field yet!
+		</div>
+	</div>
+<% } %>
+<div class="container">
+	<div class="row">
+	<% opportunities.reverse().forEach(function(opportunity){  %>
+		<%var date=new Date(opportunity.dateApproved).toLocaleDateString().replace("Invalid Date","NA");%>
+		<%var slug=opportunity.heading.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-')+"&id="+opportunity._id;%>
+		<div class="col-lg-4">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
+				  <img src="<%= opportunity.image %>" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title"><%= opportunity.heading.substring(0,100) %></h5>
+					<p class="card-text"><%= opportunity.shortDescription %></p>
+					 <div>
+						<a href="/opportunities/<%= slug %>" id="more" class="btn">Read More</a> 
+					  </div>
+					  <p class="text-muted" style="margin-top: 10;">Date approved: <%=date %></p>
+				  </div>
+			</div>
+		</div>
+	<%  }); %>
+	</div>
+</div>
+<%- include("../../partials/socialbar2") -%>

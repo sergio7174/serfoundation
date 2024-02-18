@@ -1,0 +1,101 @@
+<%- include("../partials/header1") -%>
+<link rel="stylesheet" href="/stylesheets/Navbar.css">
+<link rel="stylesheet" href="/stylesheets/show.css">
+<link rel="stylesheet" href="/stylesheets/Footer.css">
+<%- include("../partials/header1b") -%>
+
+<%- include("../partials/navbar") %>
+<%- include("../partials/breadcrumb") %>
+<div class="container mb-4" style="margin-top: -2rem;">
+	<%- include("../partials/flash") %>
+</div>
+<div class="container">
+	<span class="" style="background-color: purple;color: white;font-size: 1rem;padding: 5px 10px 5px 10px;border-radius: 3px;border: none;"> <%=post.category%></span>
+	<div class="row">
+		<div class="col-md-9">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
+			<h2 class="text-center">
+				<%= post.heading %>
+			</h2>
+			<% post.category= post.category? post.category: "Others" %>
+			<img src="<%= post.image %>" class="img-fluid text-center">
+			<% if(currentUser && currentUser._id.equals(adminId)) { %>
+				<div class="row d-flex justify-content-end mx-2">
+					<a href="/explore/<%= post._id %>/imageedit">
+				<button class="btn btn-warning btn-sm ">Replace Image </button></a>
+				</div>
+					
+			<%	} %>
+			<p class="text-justify">
+				<%- post.content %>
+			<p>
+			<% if(currentUser && currentUser._id.equals(adminId)) { %>
+				<div class="text-right mr-5">
+				<p class="text-muted">Submitted by <%= post.author.name %> (<%= post.author.username %>)</p>
+				</div>	
+			
+			<div class="row d-flex justify-content-end mx-2 mb-4">
+				<a href="/explore/<%= post._id %>/edit">
+				<button class="btn btn-warning btn-sm">Edit </button></a>
+			
+			 <form id="delete" action="/explore/<%= post._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger mx-2 btn-sm">Delete</button>
+            </form>
+			</div>
+			<%	} %>
+			
+			<!--=====================================-->
+			<div class="container">
+				<%- include("./likes") -%>
+				<div style=" margin:2rem auto;">
+				<form action="/explore/<%=post._id%>/comments" method="POST">
+					<div class="form-group">
+					<input type="text" name="comment[text]" placeholder="Comment . . ." class="form-control" required >
+					</div>
+					<button class="btn btn-primary d-flex justify-content-center">Add Comment </button>
+				</form>
+				</div>
+				<hr>
+				<% post.comments.forEach(function(comment){ %>
+					<div class="row">
+						<div class="col-md-12">
+							<strong><%= comment.author.name %></strong>
+							<div class="mb-3"><%=comment.text%> 
+							<% if(currentUser && currentUser._id.equals(adminId)) { %>
+							<form action="/explore/<%= post._id %>/comments/<%= comment._id%>?_method=DELETE" method="POST" id="inl">
+								<button class="btn btn-sm btn-danger ml-2">
+									<i class="fas fa-trash-alt"></i>
+								</button>	
+							</form>
+							<%	} %>
+							</div>
+							
+						</div>
+					</div>
+				<% }); %>
+			</div>
+			<!--=====================================-->
+			
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action active">Other Links</a>
+				<a href="https://aafngo.org/" class="list-group-item list-group-item-action" target="_blank">Our Website</a>
+				<a href="https://www.instagram.com/craft_era5/?utm_source=ig_embed" class="list-group-item list-group-item-action" target="_blank">Recycle Shop</a>
+				<a href="https://docs.google.com/forms/d/12hrxNL63xQP2TNio-_720dw7A8AeyyQZ9zDeC4Nx3rc/viewform?edit_requested=true" class="list-group-item list-group-item-action" target="_blank">Join Us Now</a>
+				<a href="mailto:donationaaf@gmail.com" class="list-group-item list-group-item-action" target="_blank">Donate</a>
+				<a href="https://aafngo.org/our-activities" class="list-group-item list-group-item-action" target="_blank">Our Activities</a>
+				<a href="https://aafngo.org/gallery" class="list-group-item list-group-item-action" target="_blank">Gallery</a>
+				<a href="https://aafngo.org/awards" class="list-group-item list-group-item-action" target="_blank">Awards</a>
+				<a href="/explore/new" class="list-group-item list-group-item-action" target="_blank" >Submit your creative writing</a>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include("../partials/footer") %>
+<style>
+	.navbar{
+		margin-bottom: 0rem !important;
+	}
+</style>

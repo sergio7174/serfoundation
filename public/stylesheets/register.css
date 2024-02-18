@@ -1,0 +1,74 @@
+body{
+	background-color:#f8f9fa;
+}
+a.nav-link{
+	color:black!important;
+}
+a.navbar-brand:hover{
+	color:#A53692!important;
+}
+a.nav-link:hover{
+	color:#A53692!important;
+}
+a.navbar-brand{
+	color:black!important;
+}
+.jumbotron{
+	background: url("https://imgur.com/cJDAUqj.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius:0;
+	padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+	height: 30vh;
+	margin-bottom: 10vh;
+}
+form{
+	width: 35vw;
+	display:inline-block;
+	float:center;
+}
+.register{
+	float:left!important;
+}
+.btn{
+	width:35vw;
+	/*  */
+}
+#signh{
+	margin-bottom: 3vh;
+}
+.btn{
+	background-color: #A53692;
+    border:0;
+    color:white!important;
+	font-weight:600;
+    /* margin-bottom: 3rem; */
+}
+.last{
+	margin-bottom: 30vh!important;
+}
+.btn:hover{
+    color:#A53692 !important;
+    background-color: white;
+}
+.btn:hover{
+	border: 2px solid #A53692;
+}
+@media (max-width:768px){
+	.btn{
+		width: 50vw;
+	}
+	form{
+		width: 50vw;
+	}
+}
+@media (max-width:576px){
+	.btn{
+		width: 90vw;
+	}
+	form{
+		width: 90vw;
+	}
+}

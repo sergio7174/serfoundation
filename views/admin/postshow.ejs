@@ -1,0 +1,45 @@
+<%- include("../partials/header1") -%>
+<link rel="stylesheet" href="/stylesheets/Navbar.css">
+<link rel="stylesheet" href="/stylesheets/show.css">
+<link rel="stylesheet" href="/stylesheets/Footer.css">
+<%- include("../partials/header1b") -%>
+<%- include("../partials/navbar") %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
+			<h2 class="text-center">
+				<%= post.heading %>
+			</h2>
+			<img src="<%= post.image %>" class="img-fluid text-center">
+			<p>
+				<%- post.content %>
+			<p>
+			<p>
+				<small class="text-muted">Submitted by <%= post.author.name %> (<%= post.author.username %>) </small>
+			</p>
+			<div class="row">
+				 <form id="delete" action="/admin/explore/<%= post._id %>?_method=DELETE" method="POST">
+					<button class="btn btn-danger mx-2">Delete</button>
+				</form>
+				<form id="approve" action="/admin/explore/<%= post._id %>?_method=PUT" method="POST">
+					<input type="submit" class="btn btn-success" value="Approve">
+				</form>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-3">
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action active">Other Links</a>
+				<a href="https://aafngo.org/" class="list-group-item list-group-item-action" target="_blank">Our Website</a>
+				<a href="https://www.instagram.com/craft_era5/?utm_source=ig_embed" class="list-group-item list-group-item-action" target="_blank">Recycle Shop</a>
+				<a href="https://docs.google.com/forms/d/12hrxNL63xQP2TNio-_720dw7A8AeyyQZ9zDeC4Nx3rc/viewform?edit_requested=true" class="list-group-item list-group-item-action" target="_blank">Join Us Now</a>
+				<a href="mailto:donationaaf@gmail.com" class="list-group-item list-group-item-action" target="_blank">Donate</a>
+				<a href="https://aafngo.org/our-activities" class="list-group-item list-group-item-action" target="_blank">Our Activities</a>
+				<a href="https://aafngo.org/gallery" class="list-group-item list-group-item-action" target="_blank">Gallery</a>
+				<a href="https://aafngo.org/awards" class="list-group-item list-group-item-action" target="_blank">Awards</a>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include("../partials/footer") %>

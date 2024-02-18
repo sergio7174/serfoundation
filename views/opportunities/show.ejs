@@ -1,0 +1,127 @@
+<%- include("../partials/header1") -%>
+<link rel="stylesheet" href="/stylesheets/Navbar.css">
+<link rel="stylesheet" href="/stylesheets/show.css">
+<link rel="stylesheet" href="/stylesheets/Footer.css">
+<%- include("../partials/header1b") -%>
+
+<%- include("../partials/navbar") %>
+<%- include("../partials/breadcrumb")  %>
+<div class="container mb-4" style="margin-top: -2rem;">
+	<%- include("../partials/flash") %>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9 card shadow p-3 mb-5 bg-white rounded" >
+			<h2 class="text-center">
+				<%= opportunity.heading %>
+			</h2>
+			<img src="<%= opportunity.image %>" class="img-fluid text-center mb-5">
+<!--- condicion para saber si el usuario es administrador -->			
+			<% if(currentUser && currentUser._id.equals(adminId)) { %>
+			<div class="row d-flex justify-content-end mx-2">
+				<a href="/opportunities/<%= opportunity._id %>/imageedit">
+					<button class="btn btn-warning btn-sm my-2">Replace Image </button>					</a>
+			</div>
+			<%	} %>
+			<p>
+				<b>About the Organisation</b> <%- opportunity.organisation %>
+			</p>
+			<p>
+				<b>About the Competition/Event/Opportunity</b> <%- opportunity.detail %>
+			</p>
+			<p>
+				<b>Eligibility/Prerequisites</b> <%- opportunity.eligibility %>
+			</p>
+			<p>
+				<b>Important Dates</b> <%- opportunity.dates %>
+			</p>
+			<% if(opportunity.process && opportunity.process.length>11){ %>
+			<p>
+				<b>Registration Process</b> <%- opportunity.process %>
+			</p>
+			<% } %>
+			<p>
+				<b>Benefits/Prizes/Perks</b> <%- opportunity.prize %>
+			</p>
+			<% if(opportunity.other && opportunity.other.length>11){ %>
+			<p>
+				<b>Other Details</b> <%- opportunity.other %>
+			</p>
+			<% } %>
+			<p>
+				<b>Contact details for more information</b><%- opportunity.contact %>
+			</p>
+			<h2><b>currentUser:</b> <%- currentUser %></h2>
+			<h2><b>currentUser._id:</b> <%- currentUser._id %></h2>
+			<h2><b>adminId:</b> <%- adminId %></h2>
+<!--- condicion para saber si el usuario es administrador -->	
+
+			<% if(currentUser && currentUser._id.equals(adminId)) { %>
+			<div class="row d-flex justify-content-end mx-2 mb-4">
+				<a href="/opportunities/<%= opportunity._id %>/edit">
+				<button class="btn btn-warning btn-sm">Edit </button></a>
+			 <form id="delete" action="/opportunities/<%= opportunity._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger btn-sm mx-2">Delete</button>
+            </form>
+			</div>
+			<%	} %>
+		</div>
+		<div class="col-md-3">
+			<div class="list-group">
+<% if(opportunity.category==1){ %>
+  <a href="/opportunities/science" class="list-group-item list-group-item-action active">Science and Technology</a>
+	<%	} else{ %>
+	<a href="/opportunities/science" class="list-group-item list-group-item-action">Science and Technology</a>			
+	<% } %>
+<% if(opportunity.category==2){ %>
+  <a href="/opportunities/business" class="list-group-item list-group-item-action active">Business, management andadministration</a>
+		<% } else{ %>
+<a href="/opportunities/business" class="list-group-item list-group-item-action">Business, management and administration</a>	
+				<% } %>
+<% if(opportunity.category==3){ %>
+  <a href="/opportunities/legal" class="list-group-item list-group-item-action active">Legal</a>
+				<% } else{ %>
+	<a href="/opportunities/legal" class="list-group-item list-group-item-action">Legal</a>
+	<% } %>
+<% if(opportunity.category==4){ %>
+  <a href="/opportunities/media" class="list-group-item list-group-item-action active">Media and Journalism</a>
+				<% } else { %>
+<a href="/opportunities/media" class="list-group-item list-group-item-action">Media and Journalism</a>
+	<% } %>
+<% if(opportunity.category==5){ %>
+  <a href="/opportunities/humanities" class="list-group-item list-group-item-action active">Humanities</a>
+				<% } else{ %>
+<a href="/opportunities/humanities" class="list-group-item list-group-item-action">Humanities</a>
+	<% } %>
+<% if(opportunity.category==6){ %>
+	<a href="/opportunities/governmentjobs" class="list-group-item list-group-item-action active">Government Jobs</a>
+				<% } else{ %>
+	<a href="/opportunities/governmentjobs" class="list-group-item list-group-item-action">Government Jobs</a>
+	<% } %>
+<% if(opportunity.category==7){ %>
+	<a href="/opportunities/school" class="list-group-item list-group-item-action active">School-level Opportunitities</a>
+				<% } else{ %>
+	<a href="/opportunities/school" class="list-group-item list-group-item-action">School-level Opportunitities</a>
+	<% } %>
+<% if(opportunity.category==8){ %>
+	<a href="/opportunities/other" class="list-group-item list-group-item-action active">Other Fields</a>
+				<% } else{ %>
+	<a href="/opportunities/other" class="list-group-item list-group-item-action">Other Fields</a>
+	<% } %>
+	<a href="/opportunities/new" target="_blank" class="list-group-item list-group-item-action">Add a New Opportunity</a>
+</div>
+		</div>
+		
+	</div>
+	
+	
+</div>
+<%- include("../partials/footer") %>
+<style>
+	.navbar{
+		margin-bottom: 0rem !important;
+	}
+	.breadcrumb{
+		margin-bottom: 5rem;
+	}
+</style>

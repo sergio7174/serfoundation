@@ -1,0 +1,69 @@
+<%- include("../partials/header1") %>
+<link rel="stylesheet" href="/stylesheets/Navbar.css">
+<link rel="stylesheet" href="/stylesheets/new2.css">
+<link rel="stylesheet" href="/stylesheets/Buttons.css">
+<link rel="stylesheet" href="/stylesheets/Footer.css">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<%- include("../partials/header1b") %>
+
+<!--======================================================-->
+<div class="jumbotron">
+<!--Navbar=====================================-->
+<%- include("../partials/navbar") %>
+<!--=====================================================================-->
+<div class="container text-center">
+	<h1 id="oh1">Submit Your Creative Writing</h1>
+</div>
+</div>
+<!--=======================================================-->
+<div class="container">
+	<h1 id="oh2" class="text-center">Submit Your Creative Writing</h1>
+	<p id="p1">Note: All fields are mandatory. </p>
+	<form action="/explore" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+		<label for="formGroupExampleInput">Heading</label>
+		<input type="text" class="form-control" id="formGroupExampleInput" name="post[heading]" required>
+		  <small class="form-text text-muted">This will appear as the heading of your post</small>
+	  	</div>
+		<div class="col-lg-8">
+			<div class="form-group">
+			<label for="inlineFormCustomSelect">Choose Category <span class="asterisk">*</span></label>
+			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="post[category]" required>
+				<% categories.forEach((category)=>{%>
+					<option value=<%=category._id%>><%=category.name%></option>
+				<%})%>
+			</select>
+			</div>
+		</div>
+		<div class="form-group">
+		<label for="formGroupExampleInput">Short Description(100 Characters)</label>
+		<input type="text" class="form-control" id="formGroupExampleInput" name="post[shortDescription]" maxlength = "100" required>
+		  <small class="form-text text-muted">This will appear under the heading on the main page</small>
+	  </div>
+		<div class="form-group">
+			<label for="exampleFormControlFile1">Upload Image(Orientation: Square/Landscape)</label>
+			<input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" accept="image/*" required>
+			<small class="form-text text-muted">Only .jpg/.jpeg/.png formats allowed. Max size 0.5MB</small>
+		</div>
+		
+		<div class="form-group">
+			<label for="content">Content</label>
+			<div id="content"></div>
+			<input type="hidden" name="content">
+		</div>
+		<div class="form-group">
+			<input type="checkbox" id="terms" required>
+			<label for="terms">I here by declare that the project report/Write up/ Critical Analysis or any kind similar nature of work submitted by me to Parvaaz Parindey by Asha Akansha Foundation , is a record of bonafide work carried out by me, with no kind of plagiarism. All due credits are given to resources cited. I further declare that the work reported in this has not been submitted and will not be submitted, either in part or in full, for the award of any other organization or any other institutions.</label>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-lg" id="btn-submit">Submit</button>
+		</div>
+	</form>
+</div>
+<!--========================================================-->
+<!--================================-->
+<script src="../../javascript/quill1.js"></script>
+
+ <%- include("../partials/footer") %>
+   

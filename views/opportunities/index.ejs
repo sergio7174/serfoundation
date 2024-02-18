@@ -1,0 +1,125 @@
+<%- include("../partials/header1") %>
+<link rel="preload" href="https://imgur.com/VxVLFUx.jpg" as="image">
+<!--===Custom stylesheets=========================-->
+	  <link rel="stylesheet" href="/stylesheets/Navbar.css">
+	  <link rel="stylesheet" href="/stylesheets/opportunities.css">
+	  <link rel="stylesheet" href="/stylesheets/Buttons.css">
+	<link rel="stylesheet" href="/stylesheets/socialbar.css">
+	  <link rel="stylesheet" href="/stylesheets/Footer.css">
+<!--==============================================-->
+<%- include("../partials/header1b") %>
+<div class="jumbotron">
+<!--Navbar=====================================-->
+<%- include("../partials/navbar") %>
+
+<!--=====================================================================-->
+<div class="container opph">
+	<h1 class="heading"> Know Your Opportunities </h1>
+	<p class="txt1">
+		A portal for keeping you updated about all the latest opportunities in different fields.
+	</p>
+	<a href="/opportunities/new">
+	<button class="btn">
+		Add a New Opportunity
+	</button></a>
+</div>
+</div>
+<!--================================-->
+<div class="container mb-5 mt-1">
+<%- include("../partials/flash") %>
+</div>
+<!--================================-->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<a href="/opportunities/science">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/science.jpg" class="card-img img-fluid" alt="Picture of Earth showing network of computers">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Science and Technology</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+		<div class="col-lg-6">
+			<a href="/opportunities/business">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/business.jpg" class="card-img img-fluid" alt="Picture of Eye view of Skyscrapers">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Business, management and administration</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<a href="/opportunities/legal">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img src="/images/legal.jpg" class="card-img" alt="A dark black wood bookcase with tons of books and a ladder, in the distance you can see marble busts of different male figures">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Legal</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+		<div class="col-lg-6">
+			<a href="/opportunities/media">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/media.jpg" class="card-img" alt="Behind the camera view of a video shoot">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Media and Journalism</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<a href="/opportunities/humanities">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/humanity.jpg" class="card-img img-fluid" alt="Block style illustration with fashion influences">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Humanities</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+		<div class="col-lg-6">
+			<a href="/opportunities/governmentjobs">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/gobermentJobs.jpg" class="card-img img-fluid" alt="Photo of millenial business people shaking hands" style="object-fit:cover;">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Government Jobs</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<a href="/opportunities/school">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/school-level.jpg" class="card-img img-fluid" alt="Picture with stars and a red ribbon">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">School-level Opportunitities</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+		<div class="col-lg-6">
+			<a href="/opportunities/other">
+			<div class="card bg-dark text-white shadow-lg p-3 mb-5 bg-white rounded">
+			  <img loading="lazy" src="/images/others.jpg" class="card-img img-fluid" alt="Picture of abstract art Pungent Euphoria">
+			  <div class="card-img-overlay">
+				<h3 class="card-title">Other Fields</h3>
+			  </div>
+			</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<%- include("../partials/socialbar2") -%>
+<!--================================-->
+ <%- include("../partials/footer") %>

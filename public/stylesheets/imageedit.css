@@ -1,0 +1,16 @@
+.navbar{
+	background-color:black;
+	margin-bottom:4rem;
+}
+h1{
+	margin:2rem;
+}
+.alert{
+	margin-bottom:2rem;
+}
+.btn{
+	margin-bottom: 35vh;
+}
+.btn:hover{
+	border: 2px solid #A53692;
+}

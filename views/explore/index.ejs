@@ -1,0 +1,54 @@
+<link rel="preload" href="https://imgur.com/13Iewor.jpg" as="image">
+<%- include("../partials/header1") %>
+<link rel="stylesheet" href="/stylesheets/Navbar.css">
+<link rel="stylesheet" href="/stylesheets/Buttons.css">
+<link rel="stylesheet" href="/stylesheets/explore.css">
+<link rel="stylesheet" href="/stylesheets/socialbar.css">
+<link rel="stylesheet" href="/stylesheets/Footer.css">
+<%- include("../partials/header1b") %>
+<div class="jumbotron ">
+	<%- include("../partials/navbar") %>
+	<div class="container text-center">
+		<h1 id="exp">Explore Posts</h1>
+		<a href="/explore/new" class="btn">Submit Your Creative Writing</a>
+	</div>
+</div>
+<div class="container mb-5 mt-1">
+<%- include("../partials/flash") %>
+</div>
+
+<div class="container">
+	<div class="dropdown d-flex justify-content-end">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  <%=selectedCategory%>
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<%categories.forEach((category)=>{%>
+				<a class="dropdown-item" href="/explore?category=<%=category.name%>"><%=category.name%> <%="("+category.count+")"%></a>
+			<%})%>
+		</div>
+	</div>
+	
+
+	<div class="row">
+	<% posts.reverse().forEach(function(post){  %>
+		<%var date=new Date(post.dateApproved).toDateString().replace("Invalid Date","");%>
+		<%var slug=post.heading.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-')+"&id="+post._id;%>
+		<div class="col-lg-4">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
+				  <img src="<%= post.image %>" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title"><%= post.heading.substring(0,100) %></h5>
+						  <p class="card-text"><%= post.shortDescription %></p>
+					 <div>
+						<a href="/explore/<%=slug%>" id="more" class="btn">Read More</a>
+					  </div>
+					  <p class="text-muted" style="margin-top: 10;"> <%=date %></p>
+				  </div>
+			</div>
+		</div>
+	<%  }); %>
+	</div>
+</div>
+<%- include("../partials/socialbar2") -%>
+<%- include("../partials/footer") %>
